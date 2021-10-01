@@ -1,0 +1,33 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background: rgb(226, 225, 225);
+}
+
+.container{
+    width: 600px;
+    min-height: 100vh;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+toolbox
+*/
+.toolbox{
+
+}
+
+/*
+contets
+*/
+textarea{
+    -webkit-appearance: none;
+    height: 500px;
+    width: 100%;
+}
+
+.contents{
+    overflow: hidden;
+    height: 500px;
+}
