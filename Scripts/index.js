@@ -18,45 +18,44 @@ textArea.innerText = text
 
 
 const toolbox = document.querySelectorAll('button')
-
+const linkURL = document.querySelector('.link')
 
 let clickedTimes = 0
 function formatString(){
     const self = {
-        H1: () => {
-            if(clickedTimes < 1){
-                document.execCommand('fontSize', true,'5pt')
-                clickedTimes += 1
-            } else {
-                document.execCommand('fontSize', true,'3pt')
-                clickedTimes = 0
-            }
+        h1: () => {
+            if(clickedTimes < 1){document.execCommand('fontSize', true,'5pt'); clickedTimes += 1} 
+            else { document.execCommand('fontSize', true,'3pt'); clickedTimes = 0}
         },
-        Bold: () => { document.execCommand('bold') },
-        Italic: () => {document.execCommand('italic')  },
-        Subscript: () => { document.execCommand('subscript') },
+        bold: () => { document.execCommand('bold') },
+        italic: () => {document.execCommand('italic')  },
+        subscript: () => { document.execCommand('subscript') },
         horizontalLine: () => { document.execCommand('insertHTML', true, '<hr/>') },
-        Underline: () => { document.execCommand('underline') }
+        underline: () => { document.execCommand('underline') },
+        link: () => { document.execCommand('createLink', true, linkURL.value) }
     }
     return self
 }
 
 toolbox[0].addEventListener('click', ()=>{
-    formatString().H1()
+    formatString().h1()
 })
 toolbox[1].addEventListener('click', ()=>{
-    formatString().Bold()
+    formatString().bold()
 })
 toolbox[2].addEventListener('click', ()=>{
-    formatString().Italic()
+    formatString().italic()
 })
 toolbox[3].addEventListener('click', ()=>{
-    formatString().Subscript()
+    formatString().subscript()
 })
 toolbox[4].addEventListener('click', ()=>{
     formatString().horizontalLine()
     console.log('aa')
 })
 toolbox[5].addEventListener('click', ()=>{
-    formatString().Underline()
+    formatString().underline()
+})
+toolbox[6].addEventListener('click', ()=>{
+    formatString().link()
 })
