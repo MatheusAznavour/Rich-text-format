@@ -18,7 +18,7 @@ textArea.innerText = text
 
 
 const toolbox = document.querySelectorAll('button')
-const linkURL = document.querySelector('.link')
+const linkURL = document.querySelector('.linkURL')
 
 let clickedTimes = 0
 function formatString(){

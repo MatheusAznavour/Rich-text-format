@@ -1,7 +1,7 @@
 body{
     margin: 0%;
     padding: 0%;
-    background: rgb(226, 225, 225);
+    background: #F6F4F4;
 }
 
 .container{
@@ -15,22 +15,48 @@ body{
 toolbox
 */
 .toolbox{
+    margin-top: 40px;
+    height: 90px;
+    border-bottom: 1pt solid rgba(0, 0, 0, 0.3);
+    background: white;
+}
+.toolbox button{
+    margin: 60px 0 0  10px;
+    border: none;
+    background: white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 18px;
+    font-weight: bold;
+}
+.toolbox button:hover{
+    cursor: pointer;
+}
 
+input:focus{
+    outline: none;
+}
+
+.linkURL{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 5pt;
+    width: 250px;
+    padding-left: 15px;
 }
 
 /*
 contets
 */
-
 .textarea{
-    padding: 0 0 0 10px;
+    padding: 10px 0 0 10px;
     background: white;
     -webkit-appearance: none;
     height: 500px;
     width: 100%;
+    outline: none;
 }
 
 .contents{
+    font-family: Arial, Helvetica, sans-serif;
     overflow: hidden;
     height: 500px;
 }
